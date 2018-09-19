@@ -1,0 +1,43 @@
+.table {
+	table-layout: fixed;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 20px;
+    margin-right: 50px;    
+    float: right;
+}
+
+.table td, .table th {
+    border: 1px solid #ddd;
+}
+
+.table tr:nth-child(even){background-color: #f2f2f2;}
+
+.table th.edit, th.delete, td.edit, td.delete {
+	width: 80px;
+}
+
+.table th.role, td.role {
+	width: 60px;
+}
+
+.table th.created, th.updated, td.created, td.updated {
+	width: 180px;
+}
+
+.table th.name, th.surname, th.email, td.name, td.surname, td.email {
+	width: 120px;
+}
+
+.table th.id, td.id {
+	width: 220px;
+}
+
+.table th.email, td.email {
+	width: 220px;
+}
+
+
+
+
