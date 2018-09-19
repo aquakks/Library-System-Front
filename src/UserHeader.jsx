@@ -1,6 +1,7 @@
+import { UserRow } from "./UserRow";
 import './UserHeader.css';
 import * as React from "react";
-import { UserRow } from "./UserRow";
+
 
 export class UserHeader extends React.Component {
   userToUserRow= user => {
@@ -18,7 +19,7 @@ export class UserHeader extends React.Component {
   render() {
     return (    
     <div>
-    <table className="table">
+    <table className="usersH">
     <tr>
       <th className="id">id</th>
       <th className="email">email</th>

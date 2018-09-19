@@ -1,23 +1,52 @@
-
-.table {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.table td, .table th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-.table tr:nth-child(even){background-color: #f2f2f2;}
-
-.table tr:hover {background-color: #ddd;}
-
-.table th {
+table.usersH th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background-color: #635b5b;
     color: white;
 }
+
+table.usersH {
+	table-layout: fixed;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 150px;
+    margin-right: 50px;    
+    float: right;
+}
+
+table.usersH td, .table.usersH th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table.usersH tr:nth-child(even){background-color: #f2f2f2;}
+
+table.usersH tr:hover {background-color: #ddd;}
+
+table.usersH th.edit, th.delete, td.edit, td.delete {
+	width: 80px;
+}
+
+table.usersH th.role, td.role {
+	width: 60px;
+}
+
+table.usersH th.created, th.updated, td.created, td.updated {
+	width: 180px;
+}
+
+table.usersH th.name, th.surname, th.email, td.name, td.surname, td.email {
+	width: 120px;
+}
+
+table.usersH th.id, td.id {
+	width: 220px;
+}
+
+table.usersH th.email, td.email {
+	width: 220px;
+}
+
+

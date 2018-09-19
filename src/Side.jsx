@@ -15,7 +15,6 @@ export class Side extends Component {
       <a href="#orders">Zamówienia</a>
       <a href="#messages">Zgłoszenia</a>
       <a href="#calendar">Kalendarz</a>
-	  {User}
     </div>
     );
 };

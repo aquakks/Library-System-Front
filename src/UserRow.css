@@ -1,40 +1,41 @@
-.table {
+table.users {
 	table-layout: fixed;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 80%;
-    margin-left: 20px;
+    margin-left: 150px;
     margin-right: 50px;    
     float: right;
 }
 
-.table td, .table th {
+table.users td, .table.usersH th {
     border: 1px solid #ddd;
+    padding: 8px;
 }
 
-.table tr:nth-child(even){background-color: #f2f2f2;}
+table.users tr:nth-child(even){background-color: #f2f2f2;}
 
-.table th.edit, th.delete, td.edit, td.delete {
+table.users th.edit, th.delete, td.edit, td.delete {
 	width: 80px;
 }
 
-.table th.role, td.role {
+table.users th.role, td.role {
 	width: 60px;
 }
 
-.table th.created, th.updated, td.created, td.updated {
+table.users th.created, th.updated, td.created, td.updated {
 	width: 180px;
 }
 
-.table th.name, th.surname, th.email, td.name, td.surname, td.email {
+table.users th.name, th.surname, th.email, td.name, td.surname, td.email {
 	width: 120px;
 }
 
-.table th.id, td.id {
+table.users th.id, td.id {
 	width: 220px;
 }
 
-.table th.email, td.email {
+table.users th.email, td.email {
 	width: 220px;
 }
 

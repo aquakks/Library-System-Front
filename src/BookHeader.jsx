@@ -19,9 +19,9 @@ export class BookHeader extends React.Component {
   render() {
     return (    
     <div>
-    <table className="table">
+    <table className="booksH">
     <tr>
-      <th className="idBook">id</th>
+      <th className="idBook"> id</th>
       <th className="authors">autorzy</th>
       <th className="title">tytuł</th>
       <th className="publisher">wydawnictwo</th>

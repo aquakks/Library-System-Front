@@ -4,7 +4,7 @@ import * as React from "react";
 export const BookRow = ({ idBook, authors, title, publisher, year, date, description, copies}) => {
   return (
 <div>
-<table className="table" width="80%">
+<table className="books" width="80%">
     <tbody>
       <tr>
         <td className="idBook">{idBook}</td>

@@ -1,23 +1,44 @@
 
-.table {
+table.booksH {
+    table-layout: fixed;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 80%;
+    margin-left: 150px;
+    margin-right: 20px;
+    margin-top: 50px;
+    float: right;
 }
 
-.table td, .table th {
+table.booksH td, table.booksH th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-.table tr:nth-child(even){background-color: #f2f2f2;}
+table.booksH tr:nth-child(even){background-color: #f2f2f2;}
 
-.table tr:hover {background-color: #ddd;}
+table.booksH tr:hover {background-color: #ddd;}
 
-.table th {
+table.booksH th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background-color: #635b5b;
     color: white;
+}
+
+table.booksH th.idBook, th.title, th.publisher, th.year, td.idBook, td.title, td.publisher, td.year {
+	width: 150px;
+}
+
+table.booksH th.date, th.description, th.copies, td.date, td.description, td.copies {
+	width: 120px;
+}
+
+table.booksH th.edit, th.delete, td.edit, td.delete {
+	width: 80px;
+}
+
+table.booksH th.authors, td.authors {
+	width: 150px;
 }
