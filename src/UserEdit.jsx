@@ -2,7 +2,6 @@ import React from 'react';
 import './UserEdit.css';
 
 
-
 const UserEdit = () => {
   return (
 <div class="container">
@@ -26,6 +25,14 @@ const UserEdit = () => {
     <div class="row">
       <div class="col-25">
         <label for="surname">Nazwisko</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="surname" name="" placeholder=""/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">email</label>
       </div>
       <div class="col-75">
         <input type="text" id="surname" name="" placeholder=""/>

@@ -6,7 +6,7 @@ import BookInfo from './BookInfo';
 import Login from "./Login";
 import AdminUsers from "./AdminUsers";
 import AdminBooks from "./AdminBooks";
-
+import AdminEditUser from "./AdminEditUser";
 
 import {
   BrowserRouter as Router,
@@ -26,6 +26,7 @@ class App extends Component {
         <Route path="/login" component={Login}/>
         <Route path="/admin/users" component={AdminUsers}/>
         <Route path="/admin/books" component={AdminBooks}/>
+        <Route path="/admin/edituser" component={AdminEditUser}/>
       </div>
     </Router>
     );

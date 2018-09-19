@@ -12,7 +12,7 @@ input[type=text], select, textarea {
 }
 
 label {
-    margin-left: 250px;
+    margin-left: 150px;
     padding: 12px 12px 12px 0;
     font-weight: bold;
     display: inline-block;
@@ -27,11 +27,11 @@ input[type=submit] {
     cursor: pointer;
     float: left;
     margin-top: 10px;
-    margin-left: 860px;
+    margin-left: 850px;
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #ccc;
 }
 
 .container {
