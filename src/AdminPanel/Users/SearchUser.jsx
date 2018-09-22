@@ -1,9 +1,9 @@
-import './Search.css';
+import './SearchUser.css';
 import React, { Component } from 'react';
 
 
 
-export class Search extends Component {
+export class SearchUser extends Component {
 
      render() {
       
@@ -15,12 +15,11 @@ export class Search extends Component {
                 <div class="category">
                     <select>
                         <option>id</option>
-                        <option>autor</option>
-                        <option>tytuł</option>
-                        <option>wydawnictwo</option>
-                        <option>rok</option>
-                        <option>data publikacji</option>
-                         <option>opis</option>
+                        <option>email</option>
+                        <option>imię</option>
+                        <option>nazwisko</option>
+                        <option>zaaktualizowano</option>
+                        <option>utworzono</option>
                     </select>
                 </div>
             </form>                            
@@ -31,4 +30,4 @@ export class Search extends Component {
 };
 }
 
-export default Search;
+export default SearchUser;

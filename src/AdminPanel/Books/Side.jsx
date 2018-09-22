@@ -1,5 +1,4 @@
 import './Side.css';
-import { User } from "./User";
 import React, { Component } from 'react';
 
 

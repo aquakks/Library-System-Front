@@ -1,16 +1,17 @@
 form {
-    margin-left: 150px;
+    margin-left: 100px;
     margin-top: 20px;
     width: 300px;
 }
 
 input[type=word] {
-    margin-left: 150px;
+    margin-top: 50px;
+    margin-left: 100px;
     width: 300px;
 }
 
 input[type=btsearch] {
-    margin-left: 360px;
+    margin-left: 310px;
     margin-top: 10px;
     float: left;  
     width: 90px;

@@ -1,18 +1,12 @@
-table.usersH th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #635b5b;
-    color: white;
-}
 
 table.usersH {
 	table-layout: fixed;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 80%;
-    margin-left: 150px;
-    margin-right: 50px;    
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-top: 50px;    
     float: right;
 }
 
@@ -24,6 +18,14 @@ table.usersH td, .table.usersH th {
 table.usersH tr:nth-child(even){background-color: #f2f2f2;}
 
 table.usersH tr:hover {background-color: #ddd;}
+
+table.usersH th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #635b5b;
+    color: white;
+}
 
 table.usersH th.edit, th.delete, td.edit, td.delete {
 	width: 80px;
@@ -48,5 +50,3 @@ table.usersH th.id, td.id {
 table.usersH th.email, td.email {
 	width: 220px;
 }
-
-

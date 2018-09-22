@@ -28,14 +28,12 @@
   padding-right: 50px;
 }
 
-
 .rightcolumn {
   float: left;
   width: 20%;
   padding-left: 20px;
   padding-right: 20px;
 }
-
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

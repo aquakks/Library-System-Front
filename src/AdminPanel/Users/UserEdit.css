@@ -12,7 +12,7 @@ input[type=text], select, textarea {
 }
 
 label {
-    margin-left: 100px;
+    margin-left: 150px;
     padding: 12px 12px 12px 0;
     font-weight: bold;
     display: inline-block;
@@ -34,7 +34,7 @@ input[type=submit]:hover {
     background-color: #ccc;
 }
 
-.container {
+.userContainer {
     padding: 20px;
     margin-left: 60px;
 }

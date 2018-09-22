@@ -23,7 +23,7 @@ export class UserHeader extends React.Component {
     <tr>
       <th className="id">id</th>
       <th className="email">email</th>
-      <th className="name">imie</th>
+      <th className="name">imię</th>
       <th className="surname">nazwisko</th>
       <th className="created">zaaktualizowano</th>
       <th className="updated">utworzono</th>

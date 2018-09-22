@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './Home';
-import { User } from './User';
-import BookInfo from './BookInfo';
+import Home from './Home/Home';
+import { User } from "./AdminPanel/Users/User";
+import BookInfo from "./BookInfo/BookInfo.jsx";
 import Login from "./Login";
-import AdminUsers from "./AdminUsers";
-import AdminBooks from "./AdminBooks";
-import AdminEditUser from "./AdminEditUser";
-import AdminEditBook from "./AdminEditBook";
+import AdminUsers from "./AdminPanel/Users/AdminUsers";
+import AdminBooks from "./AdminPanel/Books/AdminBooks";
+import AdminEditUser from "./AdminPanel/Users/AdminEditUser";
+import AdminEditBook from "./AdminPanel/Books/AdminEditBook";
+
 
 import {
   BrowserRouter as Router,
@@ -23,7 +24,7 @@ class App extends Component {
       <div className="container">
         <Route exact path="/" component={Home} />
         <Route path="/user/:id" component={User}/>
-        <Route path="/bookinfo/:id" component={BookInfo}/>
+        <Route path="/booksinfo/:id" component={BookInfo}/>
         <Route path="/login" component={Login}/>
         <Route path="/admin/users" component={AdminUsers}/>
         <Route path="/admin/books" component={AdminBooks}/>

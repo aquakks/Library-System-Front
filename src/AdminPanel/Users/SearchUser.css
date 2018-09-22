@@ -1,0 +1,28 @@
+form {
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 300px;
+}
+
+input[type=word] {
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 300px;
+}
+
+input[type=btsearch] {
+    margin-left: 310px;
+    margin-top: 10px;
+    float: left;  
+    width: 90px;
+    background-color: #635b5b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;      
+}
+
+input[type=btsearch]:hover {
+    background-color: #ccc;
+}

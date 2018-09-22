@@ -1,9 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Head } from "./Head";
+import { Head } from "../Head";
 import { Book } from "./Book";
-import { RightMenu } from './RightMenu';
-import { Footer } from './Footer';
+import { RightMenu } from '../RightMenu';
+import { Footer } from '../Footer';
 import { BooksList } from "./BooksList";
 
 const Home = () => {
