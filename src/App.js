@@ -5,6 +5,7 @@ import { User } from "./AdminPanel/Users/User";
 import BookInfo from "./BookInfo/BookInfo.jsx";
 import Login from "./Login";
 import Test from "./Test";
+import Edit from "./Edit";
 import Wyloguj from "./Wyloguj";
 import AdminUsers from "./AdminPanel/Users/AdminUsers";
 import AdminBooks from "./AdminPanel/Books/AdminBooks";
@@ -40,6 +41,7 @@ class App extends Component {
         <Route path="/admin/book" component={AddBook}/>
         <Route path="/admin/user" component={AddUser}/>
         <Route path="/wyloguj" component={Wyloguj}/>
+        <Route path="/edit" component={Edit}/>
       </div>
     </Router>
     );
