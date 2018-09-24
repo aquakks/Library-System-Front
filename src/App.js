@@ -4,6 +4,8 @@ import Home from './Home/Home';
 import { User } from "./AdminPanel/Users/User";
 import BookInfo from "./BookInfo/BookInfo.jsx";
 import Login from "./Login";
+import Test from "./Test";
+import Wyloguj from "./Wyloguj";
 import AdminUsers from "./AdminPanel/Users/AdminUsers";
 import AdminBooks from "./AdminPanel/Books/AdminBooks";
 import AdminEditUser from "./AdminPanel/Users/AdminEditUser";
@@ -29,6 +31,7 @@ class App extends Component {
         <Route path="/user/:id" component={User}/>
         <Route path="/booksinfo/:id" component={BookInfo}/>
         <Route path="/login" component={Login}/>
+        <Route path="/test" component={Test}/>
         <Route path="/admin/users" component={AdminUsers}/>
         <Route path="/admin/books" component={AdminBooks}/>
         <Route path="/admin/edituser" component={AdminEditUser}/>
@@ -36,6 +39,7 @@ class App extends Component {
         <Route path="/admin/author" component={AddAuthor}/>
         <Route path="/admin/book" component={AddBook}/>
         <Route path="/admin/user" component={AddUser}/>
+        <Route path="/wyloguj" component={Wyloguj}/>
       </div>
     </Router>
     );

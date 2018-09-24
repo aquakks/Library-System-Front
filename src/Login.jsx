@@ -3,6 +3,11 @@ import {Button, FormGroup , FormControl ,ControlLabel} from "react-bootstrap"
 import "./Login.css";
 import { Head } from "./Head";
 import { Footer } from './Footer';
+import axios from 'axios';
+import { Form } from 'antd';
+
+
+const FormItem = Form.Item;
 
 class Login extends Component {
   constructor(props) {
@@ -10,59 +15,65 @@ class Login extends Component {
 
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      error : ""
     };
   }
+
+
+
+
 
   validateForm() {
     return this.state.email.length > 0 && this.state.password.length > 0;
   }
 
-  handleChange = event => {
-    this.setState({
-      [event.target.id]: event.target.value
-    });
-  }
+  handleEmailChange = event => {this.setState({ email: event.target.value })}
+  handlePasswordChange = event => {this.setState({ password: event.target.value })}
 
   handleSubmit = event => {
     event.preventDefault();
-  }
+
+    axios.post('http://localhost:5000/login',
+    { email: this.state.email, password: this.state.password },)
+    .then(response => {
+      if (response.data)
+      {
+      localStorage.setItem('token', response.data.token);
+      localStorage.setItem('email', this.state.email);
+      console.log(response);
+      console.log(response.data) 
+      window.location = "/test"
+      }})
+      .catch(function (error) {
+   this.setState({
+        error: 'Błąd! Złe dane logowania!'
+       }); 
+      }.bind(this))}
+        
+      
+    
 
   render() {
     return (
-        <div>
-        <Head />
-      <div className="Login">
-        <form onSubmit={this.handleSubmit}>
-          <FormGroup controlId="email" bsSize="large">
-            <ControlLabel>Email</ControlLabel>
-            <FormControl
-              autoFocus
-              type="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-          <FormGroup controlId="password" bsSize="large">
-            <ControlLabel>Password</ControlLabel>
-            <FormControl
-              value={this.state.password}
-              onChange={this.handleChange}
-              type="password"
-            />
-          </FormGroup>
-          <Button
-            block
-            bsSize="large"
-            disabled={!this.validateForm()}
-            type="submit"
-          >
-            Login
-          </Button>
-        </form>
-      </div>
-       <Footer />
-       </div>
+      
+      <div>
+      <Head />
+      <div>
+      <Form onSubmit={this.handleSubmit}>
+      <FormItem>
+        <label>Login <input type="text" name="this.state.email" onChange={this.handleEmailChange} /></label>
+      </FormItem>
+      <FormItem>
+        <label>Haslo <input type="text" name="this.state.password" onChange={this.handlePasswordChange} /></label><br />
+      </FormItem>
+        <input type="submit" value="Zaloguj"/>
+    </Form>
+    <center> <output>{this.state.error}  </output></center>
+    </div>
+    <Footer />
+    
+    </div>
     );
   }
 }

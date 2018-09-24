@@ -1,5 +1,36 @@
 import * as React from "react";
 
+
+
+function Gosc() {
+    return (
+        <li className="nav-item">
+        <a className="nav-link" href="/login">Moje konto</a>
+    </li>
+    );
+  }
+
+  function Loged() {
+    const login = localStorage.getItem('email');
+    return (
+        <li className="nav-item">
+        <a className="nav-link" href="/edit">Zalogowany jako: {login}</a> 
+        <a className="nav-link" href="/wyloguj">Wyloguj</a>
+    </li>
+       
+    );
+  }
+
+
+function Sprawdz() {
+    const isLoggedIn = localStorage.getItem('token');
+    if (isLoggedIn==null) {
+      return <Gosc />;
+    }
+    return <Loged />;
+  }
+
+
 export const Head = () => {
     return (
         <header className="ui fixed menu">
@@ -31,9 +62,7 @@ export const Head = () => {
                 </div>
                 <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
                     <ul className="navbar-nav ml-auto">
-                        <li className="nav-item">
-                            <a className="nav-link" href="/login">Moje konto</a>
-                        </li>
+                        <Sprawdz />
                     </ul>
                 </div>
             </nav>
