@@ -9,7 +9,8 @@ import AdminBooks from "./AdminPanel/Books/AdminBooks";
 import AdminEditUser from "./AdminPanel/Users/AdminEditUser";
 import AdminEditBook from "./AdminPanel/Books/AdminEditBook";
 import AddAuthor from "./AdminPanel/Author/AddAuthor";
-import AddAuthor2 from "./AdminPanel/Author/AddAuthor2";
+import AddBook from "./AdminPanel/Books/AddBook";
+import AddUser from "./AdminPanel/Users/AddUser";
 
 
 import {
@@ -33,7 +34,8 @@ class App extends Component {
         <Route path="/admin/edituser" component={AdminEditUser}/>
         <Route path="/admin/editbook" component={AdminEditBook}/>
         <Route path="/admin/author" component={AddAuthor}/>
-        <Route path="/admin/author2" component={AddAuthor2}/>
+        <Route path="/admin/book" component={AddBook}/>
+        <Route path="/admin/user" component={AddUser}/>
       </div>
     </Router>
     );

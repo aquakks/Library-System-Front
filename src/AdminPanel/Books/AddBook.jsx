@@ -1,18 +1,18 @@
 import React from 'react';
 import { Side } from "./Side";
-import AddAuthorItem from "./AddAuthorItem";
+import AddBookItem from "./AddBookItem";
 
 
 
-const AddAuthor = () => {
+const AddBook = () => {
   return (
     <div className="App">
     <div class="row">
     <div class="rightcolumn"><Side /></div>
-<div class="leftcolumn"><AddAuthorItem /></div>
+<div class="leftcolumn"><AddBookItem /></div>
 </div>
      </div>
   );
 }
 
-export default AddAuthor;
+export default AddBook;

@@ -11,7 +11,7 @@ export class SearchUser extends Component {
         <div>
             <input type="word" class="form-control" id="inputPassword2" placeholder="Wyszukiwanie"/> 
             <div>
-            <form>
+            <form name="searchUser">
                 <div class="category">
                     <select>
                         <option>id</option>
