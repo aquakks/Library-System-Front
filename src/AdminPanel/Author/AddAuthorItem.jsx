@@ -33,7 +33,6 @@ export default class AddAuthorItem extends React.Component {
 
   render() {
     return (
-
       <Form onSubmit={this.handleSubmit}>
         <FormItem>
           <label>Imię: <input type="text" name="this.state.name" onChange={this.handleNameChange} /></label>

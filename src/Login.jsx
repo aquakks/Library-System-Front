@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import {Button, FormGroup , FormControl ,ControlLabel} from "react-bootstrap"
-import "./Login.css";
 import { Head } from "./Head";
 import { Footer } from './Footer';
 import axios from 'axios';
 import { Form } from 'antd';
+import "./Login.css";
+
 
 
 const FormItem = Form.Item;
@@ -71,8 +72,9 @@ class Login extends Component {
     </Form>
     <center> <output>{this.state.error}  </output></center>
     </div>
-    <Footer />
-    
+    <a>
+    <Footer /> 
+    </a>   
     </div>
     );
   }

@@ -7,7 +7,7 @@ table.usersH {
     margin-left: 100px;
     margin-right: 50px;
     margin-top: 50px;    
-    float: right;
+    float: left;
 }
 
 table.usersH td, .table.usersH th {

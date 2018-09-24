@@ -8,13 +8,12 @@ export class Side extends Component {
      render() {
       
     return (
-    <div class="sidenav">
+      <div class="sidenav">
       <a href="users">Użytkownicy</a>
       <a href="books">Księgozbiór</a>
-      <a href="#orders">Zamówienia</a>
-      <a href="#messages">Zgłoszenia</a>
-      <a href="#calendar">Kalendarz</a>
-    </div>
+      <a href="authors">Autorzy</a>
+      <a href="orders">Wypożyczenia</a>
+      </div>
     );
 };
 }

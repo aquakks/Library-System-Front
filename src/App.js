@@ -9,6 +9,7 @@ import Edit from "./Edit";
 import Wyloguj from "./Wyloguj";
 import AdminUsers from "./AdminPanel/Users/AdminUsers";
 import AdminBooks from "./AdminPanel/Books/AdminBooks";
+import AdminAuthors from "./AdminPanel/Author/AdminAuthors";
 import AdminEditUser from "./AdminPanel/Users/AdminEditUser";
 import AdminEditBook from "./AdminPanel/Books/AdminEditBook";
 import AddAuthor from "./AdminPanel/Author/AddAuthor";
@@ -35,6 +36,7 @@ class App extends Component {
         <Route path="/test" component={Test}/>
         <Route path="/admin/users" component={AdminUsers}/>
         <Route path="/admin/books" component={AdminBooks}/>
+        <Route path="/admin/authors" component={AdminAuthors}/>
         <Route path="/admin/edituser" component={AdminEditUser}/>
         <Route path="/admin/editbook" component={AdminEditBook}/>
         <Route path="/admin/author" component={AddAuthor}/>

@@ -28,8 +28,8 @@ export class UserHeader extends React.Component {
       <th className="created">zaaktualizowano</th>
       <th className="updated">utworzono</th>
       <th className="role">rola</th>
-      <th className="edit"></th>
-      <th className="delete"></th>
+      <th className="edit">edytuj</th>
+      <th className="delete">usuń</th>
     </tr>  
     </table>
     <ul className="ui relaxed divided list selection">

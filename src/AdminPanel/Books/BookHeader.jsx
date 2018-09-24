@@ -6,7 +6,7 @@ export class BookHeader extends React.Component {
   bookToBookRow = book => {
   console.log(book);
 	const idBook = book.id;
-	const authors = book.authors;
+	const authors = book.authors.name;
 	const title = book.title;
 	const publisher = book.publisher;
 	const year = book.year;
@@ -29,8 +29,8 @@ export class BookHeader extends React.Component {
       <th className="date">data</th>
       <th className="description">opis</th>
       <th className="copies">kopie</th>
-      <th className="edit"></th>
-      <th className="delete"></th>
+      <th className="edit">edytuj</th>
+      <th className="delete">usuń</th>
     </tr>  
     </table>
     <ul className="ui relaxed divided list selection">

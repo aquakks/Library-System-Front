@@ -1,0 +1,34 @@
+
+table.authorsH {
+	table-layout: fixed;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 100px;
+    margin-right: 20px;
+    margin-top: 50px;    
+    float: left;
+}
+
+table.authors td, .table.authorsH th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table.authorsH tr:nth-child(even){background-color: #f2f2f2;}
+
+table.authorsH tr:hover {background-color: #ddd;}
+
+table.authorsH th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #635b5b;
+    color: white;
+}
+
+table.authorsH th.authorId, th.name, th.surname, th.birthYear, th.nationality, td.authorId, td.name, td.surname, td.birthYear, td.nationality {
+	width: 180px;
+}
+
+

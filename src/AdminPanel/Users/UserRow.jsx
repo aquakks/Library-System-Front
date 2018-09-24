@@ -4,7 +4,7 @@ import * as React from "react";
 export const UserRow = ({ id, email, name, surname, role, created, updated}) => {
   return (
 <div>
-<table className="users" width="80%" >
+<table className="users">
     <tbody>
       <tr>
         <td className="id">{id}</td>
