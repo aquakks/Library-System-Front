@@ -1,7 +1,7 @@
 import React from 'react';
 import { Head } from "../Head";
 import { Book } from "./Book";
-import { RightMenu } from '../RightMenu';
+import RightMenu from '../RightMenu';
 import { Footer } from '../Footer';
 import { BooksList } from "./BooksList";
 

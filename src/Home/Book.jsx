@@ -2,7 +2,8 @@ import './Book.css';
 import { BooksList } from "./BooksList";
 import React, { Component } from 'react';
  
- 
+
+
  
 export class Book extends Component {
     state = {
@@ -11,7 +12,7 @@ export class Book extends Component {
  
       componentDidMount() {
         //fetch("https://randomuser.me/api/?format=json&results=10")
-        fetch("http://localhost:5000/books/all")
+        fetch("http://localhost:5000/books/all/")
           .then(res => res.json())
           .then(json => {
               let result = json.results || json;

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const BookItem = ({ avatarUrl, rok, ilosc, name, phone }) => {
+export const BookItem = ({ avatarUrl, rok, idb, ilosc, name, phone }) => {
   return (
 <div>
 <table border="0" width="100%" cellspacing="0" cellpadding="5">
@@ -16,7 +16,8 @@ export const BookItem = ({ avatarUrl, rok, ilosc, name, phone }) => {
 <div>Rok : <strong>{rok}</strong><br />Dostępne :<strong>{ilosc}</strong></div>
 </td>
  <td align="center" width="50%" height="160">Ksiazka opowiada o ble ble ble ble bel bel bel belbe.</td>
-<td align="center" width="100" height="160">Więcej info.</td>
+<td align="center" width="100" height="160"><a href={'/booksinfo/' + name }>{idb}.</a>
+</td>
 </tr>
 </tbody>
 </table>
