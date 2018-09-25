@@ -6,14 +6,13 @@ export class BookHeader extends React.Component {
   bookToBookRow = book => {
   console.log(book);
 	const idBook = book.id;
-	const authors = book.authors.name;
 	const title = book.title;
 	const publisher = book.publisher;
 	const year = book.year;
   const date = book.date;
   const description = book.description;
   const copies = book.copies;
-    return <BookRow idBook={idBook} authors={authors} title={title} publisher={publisher} year={year} date={date} description={description} copies={copies} />;
+    return <BookRow idBook={idBook} title={title} publisher={publisher} year={year} date={date} description={description} copies={copies} />;
   };
 
   render() {
@@ -22,7 +21,6 @@ export class BookHeader extends React.Component {
     <table className="booksH">
     <tr>
       <th className="idBook"> id</th>
-      <th className="authors">autorzy</th>
       <th className="title">tytuł</th>
       <th className="publisher">wydawnictwo</th>
       <th className="year">rok</th>

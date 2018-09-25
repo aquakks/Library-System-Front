@@ -15,27 +15,27 @@ table.users td, .table.usersH th {
 
 table.users tr:nth-child(even){background-color: #f2f2f2;}
 
-table.users th.edit, th.delete, td.edit, td.delete {
+table.usersH th.edit, th.delete, td.edit, td.delete {
 	width: 80px;
 }
 
-table.users th.role, td.role {
+table.usersH th.role, td.role {
 	width: 60px;
 }
 
-table.users th.created, th.updated, td.created, td.updated {
+table.usersH th.created, th.updated, td.created, td.updated {
 	width: 180px;
 }
 
-table.users th.name, th.surname, th.email, td.name, td.surname, td.email {
+table.usersH th.name, th.surname, th.email, td.name, td.surname, td.email {
 	width: 120px;
 }
 
-table.users th.id, td.id {
+table.usersH th.id, td.id {
 	width: 220px;
 }
 
-table.users th.email, td.email {
+table.usersH th.email, td.email {
 	width: 220px;
 }
 

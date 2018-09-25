@@ -1,21 +1,21 @@
 import React from 'react';
 import { Side } from "../SideNav/Side";
-import { Author } from "./Author";
-import { SearchAuthor } from './SearchAuthor';
+import { Borrow } from "./Borrow";
+import { SearchBorrow } from './SearchBorrow';
 
 
 
 
-const AdminAuthors = () => {
+const AdminBorrows = () => {
   return (
     <div className="App">    
       <div class="row">
-      <SearchAuthor />
+      <SearchBorrow />
         <div class="rightcolumn"><Side /></div>
-        <div class="leftcolumn"><Author /></div>
+        <div class="leftcolumn"><Borrow /></div>
       </div>
     </div>
   );
 }
 
-export default AdminAuthors;
+export default AdminBorrows;

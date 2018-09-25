@@ -1,5 +1,5 @@
 import React from 'react';
-import { Side } from "./Side";
+import { Side } from "../SideNav/Side";
 import { Book2 } from "./Book2";
 import { SearchBook } from './SearchBook';
 
