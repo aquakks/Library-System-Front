@@ -1,5 +1,5 @@
 import React from 'react';
-import { Side } from "./Side";
+import { Side } from "../SideNav/Side";
 import { User} from "./User";
 import { SearchUser } from './SearchUser';
 
