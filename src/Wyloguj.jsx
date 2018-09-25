@@ -1,10 +1,12 @@
-import * as React from "react";
+import React, { Component } from "react";
 import  { Redirect } from 'react-router-dom'
 
 
 function Usun() {
-    localStorage.clear();
-  }
+    window.localStorage.clear(); 
+
+    return <h1>Wylogowano</h1>;
+    }
 
 
 
@@ -12,14 +14,15 @@ function Usun() {
        return <Redirect to='/'  />
    }
 
-export const Wyloguj = () => {
-    return (
-     <div>
-    <Usun />
-    <Red />
-    Wylogowano!
-     </div>
-    );
-};
+   class Wyloguj extends React.Component {
+    render () {
+      return (
+          <div className="application">
+            <Usun />
+            <Red />
+          </div>
+      );
+    }
+}
 
 export default Wyloguj;

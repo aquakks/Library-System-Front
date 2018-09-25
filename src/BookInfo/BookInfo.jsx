@@ -10,7 +10,7 @@ class BookInfo extends Component {
  
       componentDidMount() {
         //fetch("https://randomuser.me/api/?format=json&results=10")
-        fetch("http://localhost:5000/books/all")
+        fetch("http://localhost:5000/books/Azyl")
           .then(res => res.json())
           .then(json => {
               let result = json.results || json;

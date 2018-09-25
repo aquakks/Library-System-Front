@@ -2,8 +2,8 @@ import './Book.css';
 import { BooksList } from "./BooksList";
 import React, { Component } from 'react';
  
-
-
+ 
+const cos = localStorage.getItem('category');
  
 export class Book extends Component {
     state = {
@@ -12,7 +12,7 @@ export class Book extends Component {
  
       componentDidMount() {
         //fetch("https://randomuser.me/api/?format=json&results=10")
-        fetch("http://localhost:5000/books/all/")
+        fetch("http://localhost:5000/books/all/"+cos)
           .then(res => res.json())
           .then(json => {
               let result = json.results || json;

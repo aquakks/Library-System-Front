@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Head } from "./Head";
-import { Footer } from './Footer';
+
 
 let token = localStorage.getItem('token');
 

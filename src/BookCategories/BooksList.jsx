@@ -1,5 +1,7 @@
 import * as React from "react";
 import { BookItem } from "./BookItem";
+
+
  
 export class BooksList extends React.Component {
   bookToBookItem = book => {
@@ -7,9 +9,8 @@ export class BooksList extends React.Component {
     const avatarUrl = book.picture ? book.picture.thumbnail : {};
     const name = book.title;
     const rok=book.year;
-    const idb=book.bookId;
     const ilosc=book.numberOfCopies;
-    return <BookItem key={name} rok={rok} idb={idb} ilosc={ilosc} avatarUrl={avatarUrl} name={name} />;
+    return <BookItem key={name} rok={rok} ilosc={ilosc} avatarUrl={avatarUrl} name={name} />;
   };
  
   render() {
