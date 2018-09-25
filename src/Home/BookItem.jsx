@@ -16,7 +16,7 @@ export const BookItem = ({ avatarUrl, rok, idb, ilosc, name, phone }) => {
 <div>Rok : <strong>{rok}</strong><br />Dostępne :<strong>{ilosc}</strong></div>
 </td>
  <td align="center" width="50%" height="160">Ksiazka opowiada o ble ble ble ble bel bel bel belbe.</td>
-<td align="center" width="100" height="160"><a href={'/booksinfo/' + name }>{idb}.</a>
+<td align="center" width="100" height="160"><a href={'/booksinfo/' + name }>Zobacz wiecej.</a>
 </td>
 </tr>
 </tbody>

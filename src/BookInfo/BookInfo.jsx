@@ -9,8 +9,10 @@ export default class BookInfo extends React.Component {
     publicationdate : ''
   }
 
+
+
   componentDidMount() {
-    axios.get(`http://localhost:5000/books/Azyl`)
+    axios.get(`http://localhost:5000/books/`+this.props.match.params.id)
       .then(res => {
         const book = res.data;
         this.setState({ 
