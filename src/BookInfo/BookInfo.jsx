@@ -1,34 +1,33 @@
-import { BooksList } from "./BooksList";
-import React, { Component } from 'react';
- 
- 
- 
-class BookInfo extends Component {
-    state = {
-        books: null
-      };
- 
-      componentDidMount() {
-        //fetch("https://randomuser.me/api/?format=json&results=10")
-        fetch("http://localhost:5000/books/Azyl")
-          .then(res => res.json())
-          .then(json => {
-              let result = json.results || json;
-              this.setState({ books: result });
-              console.log(result)
-            }
-            );
-      }
- 
-     render() {
-    const books = this.state.books;
-     
+import React from 'react';
+import axios from 'axios';
+
+export default class BookInfo extends React.Component {
+  state = {
+    book : [],
+    year : '',
+    title : '',
+    publicationdate : ''
+  }
+
+  componentDidMount() {
+    axios.get(`http://localhost:5000/books/Azyl`)
+      .then(res => {
+        const book = res.data;
+        this.setState({ 
+          book : book.year,
+          title : book.title,
+          year : book.year,
+          name : book.name });
+      })
+  }
+
+  render() {
     return (
-     <div>
-     {books ? <BooksList books={books} /> : 'Ładowanie…'}
- 
-    </div>
-    );
-};
+      <ul>
+      {this.state.book}
+      {this.state.year}
+      {this.state.title}
+      </ul>
+    )
+  }
 }
-export default BookInfo;

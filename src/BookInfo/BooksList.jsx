@@ -14,7 +14,7 @@ export class BooksList extends React.Component {
   render() {
     return (
       <ul className="ui relaxed divided list selection">
-        {this.props.books.map(this.bookToBookItem)}
+        {this.bookToBookItem}
       </ul>
     );
   }
