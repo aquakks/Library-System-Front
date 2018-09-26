@@ -9,12 +9,14 @@ export default class BookInfo extends React.Component {
     year : '',
     title : '',
     publicationdate : '',
-    img : ''
+    img : '',
+    id : ''
   }
 
   componentDidMount() {
     axios.get(`http://localhost:5000/books/`+this.props.match.params.id)
       .then(res => {
+        if (res.data) {
         localStorage.setItem('book', this.props.match.params.id);
         const book = res.data;
         this.setState({ 
@@ -22,8 +24,12 @@ export default class BookInfo extends React.Component {
           title : book.title,
           year : book.year,
           name : book.name, 
+          id : book.bookId,
           img : "../" + book.title + ".jpeg" });
-      })
+      localStorage.setItem('bookid', this.state.id);
+    }
+    }
+      )
   }
 
 

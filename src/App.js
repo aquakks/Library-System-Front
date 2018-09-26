@@ -17,6 +17,8 @@ import AddAuthor from "./AdminPanel/Author/AddAuthor";
 import AddBook from "./AdminPanel/Books/AddBook";
 import AddUser from "./AdminPanel/Users/AddUser";
 import Booking from './BookCategories/Booking';
+import OrderBook from './OrderBook/OrderBook';
+import SuccesOrederBook from './OrderBook/SuccesOrderBook'
 
 
 import {
@@ -48,6 +50,8 @@ class App extends Component {
         <Route path="/wyloguj" component={Wyloguj}/>
         <Route path="/edit" component={Edit}/>
         <Route path="/bookcat" component={Booking}/>
+        <Route path="/orderbook" component={OrderBook}/>
+        <Route path="/succesorderbook" component={SuccesOrederBook}/>
       </div>
     </Router>
     );
