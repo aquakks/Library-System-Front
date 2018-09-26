@@ -16,7 +16,7 @@ import AdminEditBook from "./AdminPanel/Books/AdminEditBook";
 import AddAuthor from "./AdminPanel/Author/AddAuthor";
 import AddBook from "./AdminPanel/Books/AddBook";
 import AddUser from "./AdminPanel/Users/AddUser";
-import Booking from './BookCategories/Booking';
+import {Booking} from './BookCategories/Booking';
 import OrderBook from './OrderBook/OrderBook';
 import SuccesOrederBook from './OrderBook/SuccesOrderBook'
 import Editor from './AdminPanel/Users/Editor'
@@ -51,7 +51,7 @@ class App extends Component {
         <Route path="/admin/user" component={AddUser}/>
         <Route path="/wyloguj" component={Wyloguj}/>
         <Route path="/edit" component={Edit}/>
-        <Route path="/bookcat" component={Booking}/>
+        <Route path="/bookcat/:id" component={Booking}/>
         <Route path="/orderbook" component={OrderBook}/>
         <Route path="/succesorderbook" component={SuccesOrederBook}/>
         <Route path="/admin/usereditbefore/:id" component={EditorBefore}/>

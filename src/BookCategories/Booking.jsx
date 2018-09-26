@@ -1,22 +1,47 @@
-import React from 'react';
+import './Book.css';
+import { BooksList } from "./BooksList";
+import React, { Component } from 'react';
 import { Head } from "../Head";
-import { Book } from "./Book";
 import RightMenu  from '../RightMenu';
 import { Footer } from '../Footer';
-import { BooksList } from "./BooksList";
 
+ 
+const cos = localStorage.getItem('category');
+ 
+export class Booking extends Component {
+    state = {
+        books: null
+      };
+ 
+      componentDidMount() {
+        //fetch("https://randomuser.me/api/?format=json&results=10")
+        fetch("http://localhost:5000/books/all/"+ this.props.match.params.id)
+          .then(res => res.json())
+          .then(json => {
+              let result = json.results || json;
+              this.setState({ books: result });
+              console.log(result)
+            }
+            );
+      }
+ 
+     render() {
+    const books = this.state.books;
+     
+    return (
+     <div>
 
-const Booking = () => {
-  return (
-    <div className="App">
+           <div className="App">
     <Head />
       <div class="row">
     <div class="rightcolumn"><RightMenu /></div>
-<div class="leftcolumn"><Book /></div>
+    {books ? <BooksList books={books} /> : 'Ładowanie…'}
 </div>
        <Footer />
      </div>
-  );
-}
 
-export default Booking;
+ 
+    </div>
+    );
+};
+}

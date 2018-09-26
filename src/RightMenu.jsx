@@ -24,11 +24,11 @@ class RightMenu extends React.Component {
         <table className="menu">
             <tr>
         <ul className="list-group">
-        <a href="/bookcat" onClick={some("Fantasy")} class="list-group-item list-group-item-action">Przygodowe</a>
-        <a href="/bookcat" onClick={some("Science fiction")} class="list-group-item list-group-item-action">Sci-Fi</a>
-        <a href="/bookcat" onClick={some("Filozofia")} class="list-group-item list-group-item-action">Filozofia</a>
-        <a href="/bookcat" onClick={some("Bajki")} class="list-group-item list-group-item-action">Bajki</a>
-        <a href="/bookcat" onClick={some("Fantasy")} class="list-group-item list-group-item-action">Dla doroslych</a>
+        <a href="/bookcat/Filozofia" class="list-group-item list-group-item-action">Filozofia</a>
+        <a href="/bookcat/Fantasy" class="list-group-item list-group-item-action">Fantasy</a>
+        <a href="/bookcat/Erotyki" class="list-group-item list-group-item-action">Erotyki</a>
+        <a href="/bookcat/Bajki" class="list-group-item list-group-item-action">Bajki</a>
+        <a href="/bookcat/Science fiction" class="list-group-item list-group-item-action">Sci-Fi</a>
       </ul>
 </tr>
       </table>
