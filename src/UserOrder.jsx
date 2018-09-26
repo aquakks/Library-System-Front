@@ -6,22 +6,15 @@ const id = localStorage.getItem('id');
 
 export class UserOrder extends Component {
     state = {
-        borrows : [],
-        bookId : '',
-        startDate : '',
-        endDate : '',
-        penalty : '',
-        ext : '',
+        borrows : null
       };
-
-
 
       componentDidMount() {
         fetch('http://localhost:5000/borrows/' + id + '/all')
         .then(res => res.json())
         .then(json => {
             let result = json.results || json;
-            this.setState({ books: result });
+            this.setState({ borrows: result });
             console.log(result)
           }
           );

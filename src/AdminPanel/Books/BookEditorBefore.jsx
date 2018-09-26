@@ -5,32 +5,43 @@ import axios from 'axios';
 
 
 
-export default class AuthorEditBefore extends React.Component {
+export default class BooksEditBefore extends React.Component {
   state = {
-    authors : [],
+    books : [],
     id : '',
-    name : '',
-    surname : '',
-    birthYear : '',
-    nationality : ''
+    title : '',
+    publisher : '',
+    year : '',
+    publicationDate : '',
+    description : '',
+    category : '',
+    numberofcopies : ''
+
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:5000/authors/`+ this.props.match.params.id)
+    axios.get(`http://localhost:5000/books/`+ this.props.match.params.id)
       .then(res => {
-        const authors = res.data;
+        const books = res.data;
         this.setState({ 
-          id: authors.authorId,
-        name : authors.name,
-        surname : authors.surname,
-        birthYear : authors.birthYear,
-        nationality : authors.nationality
+          id: books.bookId,
+        title : books.title,
+        publisher : book.publisher,
+        year : book.year,
+        publicationDate : book.publicationDate,
+        description : book.description,
+        category : book.category,
+        numberofcopies : book.numberofcopies
       });
       localStorage.setItem('editid', this.state.id);
-      localStorage.setItem('editbirthYear', this.state.birthYear);  
-      localStorage.setItem('editnationality', this.state.nationality);  
-      localStorage.setItem('editname', this.state.name); 
-      localStorage.setItem('editsurname', this.state.surname);   
+      localStorage.setItem('edittitle', this.state.title);  
+      localStorage.setItem('editpublisher', this.state.publisher);
+      localStorage.setItem('edityear', this.state.year);
+      localStorage.setItem('editpublicationDate', this.state.publicationDate);
+      localStorage.setItem('editdescription', this.state.description);
+      localStorage.setItem('editcategory', this.state.category);
+      localStorage.setItem('editnoc', this.state.numberofcopies);            
+
   } )
 }
 
@@ -39,12 +50,11 @@ export default class AuthorEditBefore extends React.Component {
     return (
 
 <div>
-   Co chcesz zrobić? :
+   Czy na pewno chcesz edytowac ksiazke?
    
    <p></p>
-   <a href={"/admin/authoredit/"+this.props.match.params.id}>Edytuj autora</a>
+   <a href={"/admin/bookedit/"+this.props.match.params.id}>Tak</a>
    <p></p>
-   <a href={"/admin/authordelete/"+this.props.match.params.id}>Usun autora</a>
 
 </div>
     )

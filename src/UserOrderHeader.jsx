@@ -2,14 +2,16 @@ import './UserOrderHeader.css';
 import * as React from "react";
 import { UserOrderRow } from "./UserOrderRow";
 
+//List
+
 export class UserOrderHeader extends React.Component {
-  buffer = brw => {
-  console.log(brw);
-	const idBook = brw.idBook;
-	const startDate = brw.startDate;
-	const endDate = brw.startDate;
-	const penalty = brw.penalty;
-    const ext = brw.extends;
+  borrowToBorrowItem = borrow => {
+  console.log(borrow);
+	const idBook = borrow.bookId;
+	const startDate = borrow.startDate;
+	const endDate = borrow.startDate;
+	const penalty = borrow.penalty;
+  const ext = borrow.extends;
     return <UserOrderRow idBook={idBook} startDate={startDate} endDate={endDate} penalty={penalty} ext={ext} />;
   };
 
@@ -26,7 +28,7 @@ export class UserOrderHeader extends React.Component {
     </tr>  
     </table>
     <ul className="ui relaxed divided list selection">
-        {this.props.borrows.map(this.buffer)}
+        {this.props.borrows.map(this.borrowToBorrowItem)}
     </ul>
     </div>
     );
