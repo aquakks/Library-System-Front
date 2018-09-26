@@ -15,7 +15,7 @@ var config = {
 
 var body =  '{}';
 
-class AuthorDelete extends Component {
+class BookDelete extends Component {
   constructor(props) {
     super(props);
 
@@ -24,24 +24,32 @@ class AuthorDelete extends Component {
   }
 
 
-
-
-  handleSubmit = event => {
-    event.preventDefault();
-
-    axios.delete('http://localhost:5000/books/'+ this.props.match.params.id,
- body,config)
-    .then(response => {
-      console.log(response);
-      console.log(response.data) 
-      window.location = "/admin/books"
-})
-      .catch(function (error) {
-   this.setState({
-        error: 'Błąd! Złe dane!'
-       }); 
-      }.bind(this))}
-        
+      
+delete(event) {
+  fetch('http://localhost:5000/books/'+this.props.match.params.id, {
+          method: 'DELETE',
+          headers: {
+              'Content-Type': 'application/json',
+              'Authorization': "Bearer " + token
+          },
+          body: JSON.stringify({
+              val : 'xxx'
+          })
+      }).then(response => {
+        console.log(response);
+        console.log(response.data) 
+        window.location = "/admin/books"
+  })
+        .catch((error) => {
+          if (error.response) {
+            console.log(error.response.data); 
+            this.setState({
+              error : error.response.data.message
+            }); 
+            } 
+        })
+  event.preventDefault();
+}
       
     
 
@@ -51,12 +59,11 @@ class AuthorDelete extends Component {
       <div>
       <div>
           <p></p>
-         <center> Czy na pewno chcesz autora :  
+         <center> Czy na pewno chcesz ksiazke o id :  
          {this.props.match.params.id} </center>
 
-      <Form onSubmit={this.handleSubmit}>
-        <input type="submit" value="Tak"/>
-        </Form>
+      <center> <output>{this.state.error}  </output></center>
+        <button onClick = {this.delete.bind(this)}>DELETE</button>
     </div>
     <a>
     </a>   
@@ -65,4 +72,4 @@ class AuthorDelete extends Component {
   }
 }
 
-export default AuthorDelete;
+export default BookDelete;

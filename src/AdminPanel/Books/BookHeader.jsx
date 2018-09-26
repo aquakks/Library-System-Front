@@ -5,7 +5,7 @@ import { BookRow } from "./BookRow";
 export class BookHeader extends React.Component {
   bookToBookRow = book => {
   console.log(book);
-	const idBook = book.id;
+	const idBook = book.bookId;
 	const title = book.title;
 	const publisher = book.publisher;
 	const year = book.year;

@@ -24,25 +24,35 @@ class AuthorDelete extends Component {
   }
 
 
-
-
-  handleSubmit = event => {
+  delete(event) {
+    fetch('http://localhost:5000/authors/'+ id, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': "Bearer " + token
+            },
+            body: JSON.stringify({
+                val : 'xxx'
+            })
+        }).then(response => {
+          console.log(response);
+          console.log(response.data) 
+          window.location = "/admin/users"
+    })
+          .catch((error) => {
+            if (error.response) {
+              console.log(error.response.data); 
+              this.setState({
+                error : error.response.data.message
+              }); 
+              } 
+          })
     event.preventDefault();
-
-    axios.delete('http://localhost:5000/authors/'+ id,
- body,config)
-    .then(response => {
-      console.log(response);
-      console.log(response.data) 
-      window.location = "/admin/author"
-})
-      .catch(function (error) {
-   this.setState({
-        error: 'Błąd! Złe dane!'
-       }); 
-      }.bind(this))}
+  }
         
-      
+
+
+
     
 
   render() {
@@ -54,12 +64,9 @@ class AuthorDelete extends Component {
          <center> Czy na pewno chcesz autora :  
          {this.props.match.params.id} </center>
 
-      <Form onSubmit={this.handleSubmit}>
-        <input type="submit" value="Tak"/>
-        </Form>
+    <button onClick = {this.delete.bind(this)}>DELETE</button>
     </div>
-    <a>
-    </a>   
+    <center> <output>{this.state.error}  </output></center>
     </div>
     );
   }

@@ -26,6 +26,7 @@ import AuthorDelete from './AdminPanel/Author/AuthorDelete'
 import AuthorEditor from './AdminPanel/Author/AuthorEditor'
 import AuthorEditorBefore from './AdminPanel/Author/AuthorEditorBefore'
 import UserOrderPreview from './UserOrderPreview'
+import BookDelete from './AdminPanel/Books/BookDelete'
 
 import {
   BrowserRouter as Router,
@@ -64,6 +65,7 @@ class App extends Component {
         <Route path="/admin/authoreditbefore/:id" component={AuthorEditorBefore}/>
         <Route path="/admin/authoredit/:id" component={AuthorEditor}/>
         <Route path="/admin/authordelete/:id" component={AuthorDelete}/>
+        <Route path="/admin/bookdelete/:id" component={BookDelete}/>
         <Route path="/orders" component={UserOrderPreview}/>
       </div>
     </Router>
