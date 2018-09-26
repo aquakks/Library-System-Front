@@ -3,7 +3,9 @@ import axios from 'axios';
 import { Form } from 'antd';
 
 const token = localStorage.getItem('token');
+const email = localStorage.getItem('email');
 const FormItem = Form.Item;
+const  bodyFormData = { "val":"John"};
 
 var config = {
   headers: {
@@ -11,7 +13,9 @@ var config = {
     'Authorization': "Bearer " + token}
 };
 
-var body =  '{}';
+
+
+
 
 class Delete extends Component {
   constructor(props) {
@@ -21,25 +25,35 @@ class Delete extends Component {
     };
   }
 
+  
 
 
 
-  handleSubmit = event => {
-    event.preventDefault();
-
-    axios.delete('http://localhost:5000/users/'+ this.props.match.params.id,
- body,config)
-    .then(response => {
-      console.log(response);
-      console.log(response.data) 
-      window.location = "/admin/users"
-})
-      .catch(function (error) {
-   this.setState({
-        error: 'Błąd! Złe dane!'
-       }); 
-      }.bind(this))}
-        
+delete(event) {
+  fetch('http://localhost:5000/users/'+this.props.match.params.id, {
+          method: 'DELETE',
+          headers: {
+              'Content-Type': 'application/json',
+              'Authorization': "Bearer " + token
+          },
+          body: JSON.stringify({
+              val : 'xxx'
+          })
+      }).then(response => {
+        console.log(response);
+        console.log(response.data) 
+        window.location = "/admin/users"
+  })
+        .catch((error) => {
+          if (error.response) {
+            console.log(error.response.data); 
+            this.setState({
+              error : error.response.data.message
+            }); 
+            } 
+        })
+  event.preventDefault();
+}
       
     
 
@@ -52,10 +66,8 @@ class Delete extends Component {
          <center> Czy na pewno chcesz usunąć uzytkownika o ID :
          <strong> {this.props.match.params.id}</strong>?</center>
 
-      <Form onSubmit={this.handleSubmit}>
-        <input type="submit" value="Tak"/>
-        <a type="submit" href="/admin/users" role="button">Nie</a>
-        </Form>
+        <center> <output>{this.state.error}  </output></center>
+        <button onClick = {this.delete.bind(this)}>DELETE</button>
     </div>
     <a>
     </a>   
