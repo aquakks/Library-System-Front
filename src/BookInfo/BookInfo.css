@@ -1,0 +1,23 @@
+img {
+    margin-top: 20px;
+}
+
+input[type=submit] {
+    background-color: #635b5b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-top: 10px;
+    margin-left: 850px;
+}
+
+input[type=submit]:hover {
+    background-color: #ccc;
+}
+
+button {
+    margin-right: 200px;
+}

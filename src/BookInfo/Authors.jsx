@@ -7,11 +7,7 @@ const title = localStorage.getItem('book');
 
 export default class Authors extends React.Component {
   state = {
-    authors : []
-  }
-
-
-
+    authors : [] }
 
 
   componentDidMount() {
@@ -26,8 +22,7 @@ export default class Authors extends React.Component {
   render() {
     return (
         <ul>
-        { this.state.authors.map(authors => <li>{authors.name}</li>)}
-        { this.state.authors.map(authors => <li>{authors.surname}</li>)}
+        { this.state.authors.map(authors => <li>{authors.name + ' ' + authors.surname}</li>)}
       </ul>
 
     )
