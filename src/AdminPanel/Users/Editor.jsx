@@ -4,8 +4,10 @@ import axios from 'axios';
 import { Form } from 'antd';
 
 
-let oldrole= localStorage.getItem('editrole');  
-let oldemail = localStorage.getItem('editemail');  
+let oldRole= localStorage.getItem('editrole');  
+let oldeMail = localStorage.getItem('editemail');   
+let oldName = localStorage.setItem('editname', this.state.name); 
+let oldSurname = localStorage.setItem('editsurname', this.state.surname);   
 
 const FormItem = Form.Item;
 
