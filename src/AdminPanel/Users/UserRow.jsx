@@ -14,8 +14,8 @@ export const UserRow = ({ id, email, name, surname, role, created, updated}) => 
         <td className="created">{created}</td>
         <td className="updated">{updated}</td>
         <td className="role">{role}</td>
-		    <td className="edit"><button type="button">Edytuj</button></td>
-        <td className="delete"><button type="button">Usuń</button></td>
+		    <td className="edit"><a href={"/admin/usereditbefore/"+id}>Edit</a></td>
+		    <td className="edit"><a href={"/admin/userdelete/"+id}>Delete</a></td>
       </tr>
     </tbody>
   </table>
