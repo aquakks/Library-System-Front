@@ -6,8 +6,8 @@ import { Form } from 'antd';
 
 let oldRole= localStorage.getItem('editrole');  
 let oldeMail = localStorage.getItem('editemail');   
-let oldName = localStorage.setItem('editname', this.state.name); 
-let oldSurname = localStorage.setItem('editsurname', this.state.surname);   
+let oldName = localStorage.getItem('editname'); 
+let oldSurname = localStorage.getItem('editsurname');   
 
 const FormItem = Form.Item;
 
@@ -64,10 +64,10 @@ class Editor extends Component {
       <div>
       <Form onSubmit={this.handleSubmit}>
       <FormItem>
-        <label>Login <input type="text" name="this.state.email" value={oldrole} onChange={this.handleEmailChange} /></label>
+        <label>Login <input type="text" name="this.state.email" value={oldRole} onChange={this.handleEmailChange} /></label>
       </FormItem>
       <FormItem>
-        <label>Haslo <input type="text" name="this.state.password" value={oldrole} onChange={this.handlePasswordChange} /></label><br />
+        <label>Haslo <input type="text" name="this.state.password" value={oldRole} onChange={this.handlePasswordChange} /></label><br />
       </FormItem>
         <input type="submit" value="Zaloguj"/>
     </Form>
