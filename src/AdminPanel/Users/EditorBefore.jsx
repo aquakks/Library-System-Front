@@ -12,7 +12,7 @@ export default class EditBefore extends React.Component {
     email :'',
     role : '',
     name : '',
-    surname : ''
+    surname : '',
   }
 
   componentDidMount() {
@@ -22,7 +22,9 @@ export default class EditBefore extends React.Component {
         this.setState({ 
           id: users.id,
         role : users.role,
-        email : users.email
+        email : users.email,
+        name : users.name,
+        surname : users.surname
       });
       localStorage.setItem('editid', this.state.id);
       localStorage.setItem('editrole', this.state.role);  

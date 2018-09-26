@@ -5,7 +5,7 @@ import { Form } from 'antd';
 
 
 let oldRole= localStorage.getItem('editrole');  
-let oldeMail = localStorage.getItem('editemail');   
+let oldMail = localStorage.getItem('editemail');   
 let oldName = localStorage.getItem('editname'); 
 let oldSurname = localStorage.getItem('editsurname');   
 
@@ -17,7 +17,9 @@ class Editor extends Component {
 
     this.state = {
       email: "",
-      password: "",
+      role : "",
+      name : "",
+      surname : "",
       error : ""
     };
   }
@@ -31,19 +33,23 @@ class Editor extends Component {
   }
 
   handleEmailChange = event => {this.setState({ email: event.target.value })}
-  handlePasswordChange = event => {this.setState({ password: event.target.value })}
+  handleRoleChange = event => {this.setState({ role: event.target.value })}
+  handleNameChange = event => {this.setState({ name: event.target.value })}
+  handleSurnameChange = event => {this.setState({ surname: event.target.value })}
 
   handleSubmit = event => {
     event.preventDefault();
 
     axios.put('http://localhost:5000/users/'+ this.props.match.params.id,
-    { email: this.state.email, password: this.state.password },
+    { email : this.state.email,
+      name : this.state.name,
+      surname : this.state.surname,
+      role : this.state.role},
     {headers: {
       'Content-Type': 'application/json'}})
     .then(response => {
       if (response.data)
       {
-      localStorage.setItem('email', this.state.email);
       console.log(response);
       console.log(response.data) 
       window.location = "/admin/users"
@@ -64,12 +70,18 @@ class Editor extends Component {
       <div>
       <Form onSubmit={this.handleSubmit}>
       <FormItem>
-        <label>Login <input type="text" name="this.state.email" value={oldRole} onChange={this.handleEmailChange} /></label>
+        <label>E-mail : <input type="text" name="this.state.email" placeholder={oldMail} onChange={this.handleEmailChange} /></label>
       </FormItem>
       <FormItem>
-        <label>Haslo <input type="text" name="this.state.password" value={oldRole} onChange={this.handlePasswordChange} /></label><br />
+        <label>Rola <input type="text" name="this.state.role" placeholder={oldRole} onChange={this.handleRoleChange} /></label>
       </FormItem>
-        <input type="submit" value="Zaloguj"/>
+      <FormItem>
+        <label>Imie <input type="text" name="this.state.name" placeholder={oldName} onChange={this.handleNameChange} /></label>
+      </FormItem>
+      <FormItem>
+        <label>Nazwisko <input type="text" name="this.state.surname" placeholder={oldSurname} onChange={this.handleSurnameChange} /></label>
+      </FormItem>
+        <input type="submit" value="Zmien"/>
     </Form>
     <center> <output>{this.state.error}  </output></center>
     </div>

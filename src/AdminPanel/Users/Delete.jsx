@@ -20,9 +20,10 @@ class Delete extends Component {
     event.preventDefault();
 
     axios.delete('http://localhost:5000/users/'+ this.props.match.params.id,
-    { Authorization : 'Bearer ' + token},    
+    '{}',   
     {headers: {
-        'Content-Type': 'application/json'}})
+        'Content-Type': 'application/json',
+        'Authorization' : 'Bearer ' + token}})
     .then(response => {
       console.log(response);
       console.log(response.data) 
