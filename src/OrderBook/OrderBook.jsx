@@ -8,6 +8,7 @@ let id = localStorage.getItem('id');
 let book = localStorage.getItem('book');
 let email = localStorage.getItem('email');
 let bookid = localStorage.getItem('bookid');
+let token = localStorage.getItem('token');
 
 const FormItem = Form.Item;
 
@@ -25,20 +26,24 @@ class OrderBook extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    axios.post('http://localhost:5000/borrows/',
-    { UserID : id, BookID : bookid },    
+    axios.post('http://localhost:5000/borrows',
+    { BookId : bookid},    
     {headers: {
-        'Content-Type': 'application/json'}})
+      'Content-Type': 'application/json',
+      'Authorization': "Bearer " + token}})
     .then(response => {
       console.log(response);
       console.log(response.data) 
       window.location = "/succesorderbook"
 })
-      .catch(function (error) {
-   this.setState({
-        error: 'Błąd! Złe dane!'
-       }); 
-      }.bind(this))}
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response.data); 
+          this.setState({
+            error : error.response.data.message
+          }); 
+          } 
+      })}
         
       
     
@@ -51,11 +56,11 @@ class OrderBook extends Component {
       <div>
           <p></p>
          <center> Czy na pewno chcesz zamowic ksiazke :  
-         {" "+ book} na konto :  {email} </center>
-         {id}
+       <strong> {" "+ book} </strong>  na swoje konto?</center>
       <Form onSubmit={this.handleSubmit}>
         <input type="submit" value="Tak"/>
         </Form>
+        <center> <output>{this.state.error}  </output></center>
     </div>
     <a>
     <Footer /> 
