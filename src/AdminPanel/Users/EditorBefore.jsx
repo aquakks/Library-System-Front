@@ -20,7 +20,7 @@ export default class EditBefore extends React.Component {
       .then(res => {
         const users = res.data;
         this.setState({ 
-          id: users.id,
+        id: users.id,
         role : users.role,
         email : users.email,
         name : users.name,

@@ -1,0 +1,32 @@
+
+table.brwH {
+    table-layout: fixed;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-top: 50px;
+    float: right;
+}
+
+table.brwH td, table.brwH th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table.brwH tr:nth-child(even){background-color: #f2f2f2;}
+
+table.brwH tr:hover {background-color: #ddd;}
+
+table.brwH th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #635b5b;
+    color: white;
+}
+
+table.brwH th, td {
+	width: 150px;
+}
