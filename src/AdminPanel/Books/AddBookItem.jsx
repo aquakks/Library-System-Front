@@ -8,28 +8,28 @@ const FormItem = Form.Item;
 export default class AddBookItem extends React.Component {
   
   state = {
-    authors: '',
     title: '',
     publisher: '',
     year: '',
     publicationDate: '',
     description: '',
+    category: '',
     numberOfCopies: '',
   };
 
-  handleAuthorsChange = event => {this.setState({ authors: event.target.value })}
   handleTitleChange = event => {this.setState({ title: event.target.value })}
   handlePublisherChange = event => {this.setState({ publisher: event.target.value })}
   handleYearChange = event => {this.setState({ year: event.target.value })}
   handlePublicationDateChange = event => {this.setState({ publicationDate: event.target.value })}
   handleDescriptionChange = event => {this.setState({ description: event.target.value })}
+  handleCategoryChange = event => {this.setState({ category: event.target.value })}
   handleNumberOfCopiesChange = event => {this.setState({ numberOfCopies: event.target.value })}
 
   handleSubmit = event => {
     event.preventDefault();
 
     axios.post('http://localhost:5000/books',
-      { authors: this.state.authors, title: this.state.title, publisher: this.state.publisher, year: this.state.year, publicationDate: this.state.publicationDate, description: this.state.description, numberOfCopies: this.state.numberOfCopies},)
+      { title: this.state.title, publisher: this.state.publisher, year: this.state.year, publicationDate: this.state.publicationDate, description: this.state.description, category: this.state.category, numberOfCopies: this.state.numberOfCopies},)
       .then(res => {
         console.log(res);
         console.log(res.data);
@@ -41,10 +41,7 @@ export default class AddBookItem extends React.Component {
 
       <Form onSubmit={this.handleSubmit}>
         <FormItem>
-          <label>Autorzy: <input type="text" name="this.state.authors" onChange={this.handleAuthorsChange} /></label><br />
-        </FormItem>
-        <FormItem>
-          <label>Tytuł: <input type="text" name="this.state.title" onChange={this.handleTitleChange} /></label><br />
+          <label>Tytuł: <input type="text" name="this.state.title" placeholder = "Krzyżacy" onChange={this.handleTitleChange} /></label><br />
         </FormItem>
         <FormItem>
           <label>Wydawnictwo: <input type="text" name="this.state.publisher" onChange={this.handlePublisherChange} /></label>
@@ -59,10 +56,15 @@ export default class AddBookItem extends React.Component {
           <label>Opis: <input type="text" name="this.state.description" onChange={this.handleDescriptionChange} /></label><br />
         </FormItem>
         <FormItem>
+          <label>Kategoria: <input type="text" name="this.state.category" onChange={this.handleCategoryChange} /></label><br />
+        </FormItem>
+        <FormItem>
           <label>Liczba kopii: <input type="text" name="this.state.numberOfCopies" onChange={this.handleNumberOfCopiesChange} /></label>
         </FormItem>
           <input type="submit" value="Dodaj książkę"/>
       </Form>
+      
+      
     )
   }
 }
