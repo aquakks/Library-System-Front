@@ -26,12 +26,12 @@ export default class BooksEditBefore extends React.Component {
         this.setState({ 
           id: books.bookId,
         title : books.title,
-        publisher : book.publisher,
-        year : book.year,
-        publicationDate : book.publicationDate,
-        description : book.description,
-        category : book.category,
-        numberofcopies : book.numberofcopies
+        publisher : books.publisher,
+        year : books.year,
+        publicationDate : books.publicationDate,
+        description : books.description,
+        category : books.category,
+        numberofcopies : books.numberofcopies
       });
       localStorage.setItem('editid', this.state.id);
       localStorage.setItem('edittitle', this.state.title);  

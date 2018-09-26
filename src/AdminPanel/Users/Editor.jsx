@@ -3,7 +3,7 @@ import {Button, FormGroup , FormControl ,ControlLabel} from "react-bootstrap"
 import axios from 'axios';
 import { Form } from 'antd';
 
-
+let token= localStorage.getItem('token');
 let oldRole= localStorage.getItem('editrole');  
 let oldMail = localStorage.getItem('editemail');   
 let oldName = localStorage.getItem('editname'); 
@@ -46,19 +46,21 @@ class Editor extends Component {
       surname : this.state.surname,
       role : this.state.role},
     {headers: {
-      'Content-Type': 'application/json'}})
-    .then(response => {
-      if (response.data)
-      {
-      console.log(response);
-      console.log(response.data) 
-      window.location = "/admin/users"
-      }})
-      .catch(function (error) {
-   this.setState({
-        error: 'Błąd!'
-       }); 
-      }.bind(this))}
+      'Content-Type': 'application/json',
+      'Authorization': "Bearer " + token}})
+      .then(response => {
+        console.log(response);
+        console.log(response.data) 
+        window.location = "/admin/users"
+  })
+        .catch((error) => {
+          if (error.response) {
+            console.log(error.response.data); 
+            this.setState({
+              error : error.response.data.message
+            }); 
+            } 
+        })}
         
       
     
