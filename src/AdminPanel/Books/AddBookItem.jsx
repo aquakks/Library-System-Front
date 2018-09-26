@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Form } from 'antd';
 
 const FormItem = Form.Item;
+let token = localStorage.getItem('token');
 
 export default class AddBookItem extends React.Component {
   
@@ -28,13 +29,31 @@ export default class AddBookItem extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    axios.post('http://localhost:5000/books',
-      { title: this.state.title, publisher: this.state.publisher, year: this.state.year, publicationDate: this.state.publicationDate, description: this.state.description, category: this.state.category, numberOfCopies: this.state.numberOfCopies},)
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
+    axios.post('http://localhost:5000/books/detailed',
+      { title: this.state.title, 
+        publisher: this.state.publisher, 
+        year: this.state.year, 
+        publicationDate: this.state.publicationDate, 
+        description: this.state.description, 
+        category: this.state.category, 
+        numberOfCopies: this.state.numberOfCopies},
+        {headers: {
+          'Content-Type': 'application/json',
+          'Authorization': "Bearer " + token}})
+          .then(response => {
+            console.log(response);
+            console.log(response.data) 
+            window.location = "/admin/books"
       })
-  }
+            .catch((error) => {
+              if (error.response) {
+                console.log(error.response.data); 
+                this.setState({
+                  error : error.response.data.message
+                }); 
+                } 
+            })}
+              
 
   render() {
     return (
