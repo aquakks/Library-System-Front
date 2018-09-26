@@ -11,10 +11,10 @@ export const UserOrderRow = ({ idBook, startDate, endDate, penalty, ext}) => {
     <tbody>
       <tr>
         <td className="idBook">{idBook}</td>
-        <td className="startDate">{startDate}</td>
         <td className="endDate">{endDate}</td>
-		<td className="penalty">{penalty}</td>
+		    <td className="penalty">{penalty}</td>
         <td className="ext">{ext}</td>
+        <td className="btext"><a href={"/"}>Przedłuż</a></td>
       </tr>
     </tbody>
   </table>

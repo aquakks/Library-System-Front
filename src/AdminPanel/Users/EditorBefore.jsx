@@ -39,8 +39,8 @@ export default class EditBefore extends React.Component {
     return (
 
 <div>
-   Czy na pewno chcesz edytowac usera : {this.props.match.params.id}
-   <a href={"/admin/useredit/"+this.props.match.params.id}>Tak</a>
+<center>Czy na pewno chcesz edytowac usera : {this.props.match.params.id} </center>
+   <a href={"/admin/useredit/" + this.props.match.params.id}>Tak</a>
 
 
 </div>

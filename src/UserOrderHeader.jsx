@@ -21,10 +21,10 @@ export class UserOrderHeader extends React.Component {
     <table className="brwH">
     <tr>
       <th className="idBook"> id książki</th>
-      <th className="startDate">data wypożyczenia</th>
       <th className="endDate">data zwrotu</th>
       <th className="penalty">kara</th>
       <th className="ext">przedłużenie</th>
+      <th className="btext"> </th>
     </tr>  
     </table>
     <ul className="ui relaxed divided list selection">

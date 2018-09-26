@@ -49,11 +49,12 @@ class Delete extends Component {
       <div>
       <div>
           <p></p>
-         <center> Czy na pewno chcesz usunac uzytkownika o ID :  
-         {this.props.match.params.id} </center>
+         <center> Czy na pewno chcesz usunąć uzytkownika o ID :
+         <strong> {this.props.match.params.id}</strong>?</center>
 
       <Form onSubmit={this.handleSubmit}>
         <input type="submit" value="Tak"/>
+        <a type="submit" href="/admin/users" role="button">Nie</a>
         </Form>
     </div>
     <a>
