@@ -14,8 +14,8 @@ export const BookRow = ({ idBook, title, publisher, year, date, description, cop
         <td className="date">{date}</td>
         <td className="description">{description}</td>
         <td className="copies">{copies}</td>
-		    <td className="edit"><button type="button">Edytuj</button></td>
-        <td className="delete"><button type="button">Usuń</button></td>
+        <td className="edit"><a href={"/admin/bookeditbefore/"+idBook}>Edit</a></td>
+		    <td className="edit"><a href={"/admin/bookdelete/"+idBook}>Delete</a></td>
       </tr>
     </tbody>
   </table>

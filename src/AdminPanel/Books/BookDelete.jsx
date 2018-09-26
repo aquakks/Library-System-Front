@@ -5,6 +5,8 @@ import { Form } from 'antd';
 const token = localStorage.getItem('token');
 const FormItem = Form.Item;
 
+const id = localStorage.getItem('editid');
+
 var config = {
   headers: {
     'Content-Type': 'application/json',
@@ -13,7 +15,7 @@ var config = {
 
 var body =  '{}';
 
-class Delete extends Component {
+class AuthorDelete extends Component {
   constructor(props) {
     super(props);
 
@@ -27,12 +29,12 @@ class Delete extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    axios.delete('http://localhost:5000/users/'+ this.props.match.params.id,
+    axios.delete('http://localhost:5000/books/'+ this.props.match.params.id,
  body,config)
     .then(response => {
       console.log(response);
       console.log(response.data) 
-      window.location = "/admin/users"
+      window.location = "/admin/books"
 })
       .catch(function (error) {
    this.setState({
@@ -49,7 +51,7 @@ class Delete extends Component {
       <div>
       <div>
           <p></p>
-         <center> Czy na pewno chcesz usunac uzytkownika o ID :  
+         <center> Czy na pewno chcesz autora :  
          {this.props.match.params.id} </center>
 
       <Form onSubmit={this.handleSubmit}>
@@ -63,4 +65,4 @@ class Delete extends Component {
   }
 }
 
-export default Delete;
+export default AuthorDelete;
