@@ -31,7 +31,7 @@ export default class BooksEditBefore extends React.Component {
         publicationDate : books.publicationDate,
         description : books.description,
         category : books.category,
-        numberofcopies : books.numberofcopies
+        numberofcopies : books.numberOfCopies
       });
       localStorage.setItem('editid', this.state.id);
       localStorage.setItem('edittitle', this.state.title);  
