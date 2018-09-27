@@ -21,17 +21,18 @@ import AddBook from "./AdminPanel/Books/AddBook";
 import AddUser from "./AdminPanel/Users/AddUser";
 import {Booking} from './BookCategories/Booking';
 import OrderBook from './OrderBook/OrderBook';
-import SuccesOrederBook from './OrderBook/SuccesOrderBook'
-import Editor from './AdminPanel/Users/Editor'
-import EditorBefore from './AdminPanel/Users/EditorBefore'
-import Delete from './AdminPanel/Users/Delete'
-import AuthorDelete from './AdminPanel/Author/AuthorDelete'
-import AuthorEditor from './AdminPanel/Author/AuthorEditor'
-import AuthorEditorBefore from './AdminPanel/Author/AuthorEditorBefore'
-import UserOrderPreview from './UserOrderPreview'
-import BookDelete from './AdminPanel/Books/BookDelete'
-import BookEditBefore from './AdminPanel/Books/BookEditorBefore'
-import BookEditor from './AdminPanel/Books/BookEditor'
+import SuccesOrederBook from './OrderBook/SuccesOrderBook';
+import Editor from './AdminPanel/Users/Editor';
+import EditorBefore from './AdminPanel/Users/EditorBefore';
+import Delete from './AdminPanel/Users/Delete';
+import AuthorDelete from './AdminPanel/Author/AuthorDelete';
+import AuthorEditor from './AdminPanel/Author/AuthorEditor';
+import AuthorEditorBefore from './AdminPanel/Author/AuthorEditorBefore';
+import UserOrderPreview from './UserOrderPreview';
+import BookDelete from './AdminPanel/Books/BookDelete';
+import BookEditBefore from './AdminPanel/Books/BookEditorBefore';
+import BookEditor from './AdminPanel/Books/BookEditor';
+import AdminAuthorBook from './AdminPanel/Books/AdminAuthorBook';
 
 import {
   BrowserRouter as Router,
@@ -77,6 +78,7 @@ class App extends Component {
         <Route path="/admin/bookedit/:id" component={BookEditor}/>
         <Route path="/admin/oddaj/:id" component={Oddaj}/>
         <Route path="/orders" component={UserOrderPreview}/>
+        <Route path="/admin/test" component={AdminAuthorBook}/>
       </div>
     </Router>
     );

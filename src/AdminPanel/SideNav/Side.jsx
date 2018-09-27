@@ -18,7 +18,8 @@ export class Side extends Component {
       <a href="books">Księgozbiór
       <a href="book">Dodaj książkę</a>
       </a>
-      <a href="authors">Autorzy      
+      <a href="authors">Autorzy
+      <a href="test">Autorzy książek</a>      
       <a href="author">Dodaj autora</a>
       </a>
     </div>
