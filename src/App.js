@@ -42,12 +42,57 @@ import {
 } from 'react-router-dom';
 
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-      <div className="container">
+
+function Sprawdz() {
+  const isLoggedIn = localStorage.getItem('token');
+  const role = localStorage.getItem('role');
+  if (isLoggedIn==null) {
+    return <Gosc />;
+  } else {
+    if (role=="admin") {
+    return <Admin />; }
+    else {
+  return <Loged />; }
+}
+}
+
+
+function Gosc() {
+  return (
+    <div>
         <Route exact path="/" component={Home} />
+    <Route path="/orders" component={Login}/>
+    <Route path="/history" component={Login}/> 
+    <Route path="/bookcat/:id" component={Booking}/>
+    </div>
+  );
+}
+
+function Loged() {
+  const login = localStorage.getItem('email');
+  return (<div>
+     <Route exact path="/" component={Home} />
+        <Route path="/user/:id" component={User}/>
+        <Route path="/booksinfo/:id" component={BookInfo}/>
+        <Route path="/login" component={Login}/>
+        <Route path="/test" component={Test}/>
+        <Route path="/wyloguj" component={Wyloguj}/>
+        <Route path="/edit" component={Edit}/>
+        <Route path="/bookcat/:id" component={Booking}/>
+        <Route path="/orderbook" component={OrderBook}/>
+        <Route path="/succesorderbook" component={SuccesOrederBook}/>
+        <Route path="/orders" component={UserOrderPreview}/>
+        <Route path="/history" component={History}/> 
+     </div>
+  );
+}
+
+function Admin() {
+  const login = localStorage.getItem('email');
+  return (
+  <div>
+    
+     <Route exact path="/" component={Home} />
         <Route path="/user/:id" component={User}/>
         <Route path="/booksinfo/:id" component={BookInfo}/>
         <Route path="/login" component={Login}/>
@@ -79,8 +124,21 @@ class App extends Component {
         <Route path="/admin/bookedit/:id" component={BookEditor}/>
         <Route path="/admin/oddaj/:id" component={Oddaj}/>
         <Route path="/orders" component={UserOrderPreview}/>
-        <Route path="/history" component={History}/>
+        <Route path="/history" component={History}/> 
         <Route path="/admin/test" component={AdminAuthorBook}/>
+        </div>
+  );
+}
+
+
+
+export class App extends Component {
+  render() {
+    return (
+      <Router>
+      <div className="container">
+      
+<Sprawdz />
       </div>
     </Router>
     );
