@@ -34,6 +34,8 @@ import BookEditBefore from './AdminPanel/Books/BookEditorBefore';
 import BookEditor from './AdminPanel/Books/BookEditor';
 import AdminAuthorBook from './AdminPanel/Books/AdminAuthorBook';
 import History from './History/History';
+import Extend from './AdminPanel/BorrowsUncompleted/Extend';
+import SetPassword from './AdminPanel/Users/SetPassword';
 
 import {
   BrowserRouter as Router,
@@ -61,9 +63,11 @@ function Gosc() {
   return (
     <div>
         <Route exact path="/" component={Home} />
+        <Route path="/login" component={Login}/>
     <Route path="/orders" component={Login}/>
     <Route path="/history" component={Login}/> 
     <Route path="/bookcat/:id" component={Booking}/>
+    <Route path="/test" component={Test}/>
     </div>
   );
 }
@@ -125,7 +129,8 @@ function Admin() {
         <Route path="/admin/oddaj/:id" component={Oddaj}/>
         <Route path="/orders" component={UserOrderPreview}/>
         <Route path="/history" component={History}/> 
-        <Route path="/admin/test" component={AdminAuthorBook}/>
+        <Route path="/admin/przedluz/:id" component={Extend}/>
+        <Route path="/admin/setpassword/:id" component={SetPassword}/>
         </div>
   );
 }

@@ -3,7 +3,7 @@ import * as React from "react";
 import Moment from 'react-moment';
 
 
-export const BorrowRow = ({ id, userId, bookId, startDate, endDate, penalty, ext, isCompleted }) => {
+export const BorrowRow = ({ id, userId, bookId, title ,startDate, endDate, penalty, ext, isCompleted }) => {
   return (
 <div>
 <table className="borrows">
@@ -11,7 +11,7 @@ export const BorrowRow = ({ id, userId, bookId, startDate, endDate, penalty, ext
       <tr>
         <td className="id">{id}</td>
         <td className="userId">{userId}</td>
-        <td className="bookId">{bookId}</td>
+        <td className="bookId">{title}</td>
         <td className="startDate"><Moment format="YYYY/MM/DD">
                 {startDate}
             </Moment></td>
@@ -21,6 +21,7 @@ export const BorrowRow = ({ id, userId, bookId, startDate, endDate, penalty, ext
 		<td className="penalty">{penalty}</td>
         <td className="extends">{ext}</td>
         <td className="edit"><a href={"/admin/oddaj/"+id}>Zakoncz</a></td>
+        <td className="edit"><a href={"/admin/przedluz/"+id}>Przedluz</a></td>
       </tr>
     </tbody>
   </table>

@@ -7,12 +7,13 @@ import { UserOrderRow } from "./UserOrderRow";
 export class UserOrderHeader extends React.Component {
   borrowToBorrowItem = borrow => {
   console.log(borrow);
-	const idBook = borrow.bookId;
+  const idBook = borrow.bookId;
+  const title = borrow.bookTitle;
 	const startDate = borrow.startDate;
 	const endDate = borrow.startDate;
 	const penalty = borrow.penalty;
   const ext = borrow.extends;
-    return <UserOrderRow idBook={idBook} startDate={startDate} endDate={endDate} penalty={penalty} ext={ext} />;
+    return <UserOrderRow idBook={idBook} title={title} startDate={startDate} endDate={endDate} penalty={penalty} ext={ext} />;
   };
 
   render() {

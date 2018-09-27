@@ -20,7 +20,9 @@ class RightMenu extends React.Component {
         return (
         <div className="menu">
         <div className="well sidebar-nav">
+        <div className="category">
         <h5>Kategorie :</h5>
+        </div>
         <table className="menu">
             <tr>
         <ul className="list-group">

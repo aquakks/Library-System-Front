@@ -11,6 +11,7 @@ export default class SuccesOrederBook extends React.Component {
 
 <div>
     Ksiazka zamowiona. Lec do biblioteki.
+    <p> <a href="/">Kliknij tutaj aby przejsc na strone glowna.</a></p> 
 </div>
     )
   }

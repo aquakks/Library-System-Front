@@ -26,8 +26,8 @@ export class UserHeader extends React.Component {
       <th className="name">imię</th>
       <th className="surname">nazwisko</th>
       <th className="created">zaaktualizowano</th>
-      <th className="updated">utworzono</th>
       <th className="role">rola</th>
+      <th className="updated">nowe haslo</th>
       <th className="edit">edytuj</th>
       <th className="delete">usuń</th>
     </tr>  

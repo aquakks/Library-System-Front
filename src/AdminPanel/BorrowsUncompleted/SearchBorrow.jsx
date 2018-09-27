@@ -22,6 +22,7 @@ export class SearchBorrow extends Component {
                         <option>kara</option>
                         <option>przedłużenie</option>
                         <option>czy zakończono</option>
+                        <option>przedluz</option>
                     </select>
                 </div>
             </form>                            

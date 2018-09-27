@@ -5,13 +5,13 @@ import Moment from 'react-moment';
 
 //Item
 
-export const UserOrderRow = ({ idBook, startDate, endDate, penalty, ext}) => {
+export const UserOrderRow = ({ idBook, startDate, title, endDate, penalty, ext}) => {
   return (
 <div>
 <table className="brw" width="80%">
     <tbody>
       <tr>
-        <td className="idBook">{idBook}</td>
+        <td className="idBook">{title}</td>
         <td className="endDate">    <Moment format="YYYY/MM/DD">
                 {endDate}
             </Moment></td>

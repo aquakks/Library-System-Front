@@ -33,6 +33,8 @@ export default class Test extends React.Component {
 
 <div>
     Zostałeś zalogowany. Przejdz na glowna.
+  <p> <a href="/">Kliknij tutaj aby przejsc na strone glowna.</a></p> 
+
 </div>
     )
   }
