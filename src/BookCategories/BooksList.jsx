@@ -9,8 +9,9 @@ export class BooksList extends React.Component {
     const avatarUrl = book.picture ? book.picture.thumbnail : {};
     const name = book.title;
     const rok=book.year;
+    const desc = book.descrpiton;
     const ilosc=book.numberOfCopies;
-    return <BookItem key={name} rok={rok} ilosc={ilosc} avatarUrl={avatarUrl} name={name} />;
+    return <BookItem key={name} rok={rok} desc={desc} ilosc={ilosc} avatarUrl={avatarUrl} name={name} />;
   };
  
   render() {

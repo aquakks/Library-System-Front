@@ -15,7 +15,7 @@ const Edit = () => {
           <label>login: <input type="text" name="login" onChange={this.handleSurnameChange} /></label><br />
         </FormItem>
         <FormItem>
-          <label>hasło: <input type="text" name="password" onChange={this.handleBirthYearChange} /></label><br />
+          <label>hasło: <input type="password" name="password" onChange={this.handleBirthYearChange} /></label><br />
         </FormItem>
         <FormItem>
           <label>email:  <input type="text" name="email" onChange={this.handlenationalityChange} /></label>

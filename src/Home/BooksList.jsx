@@ -8,8 +8,9 @@ export class BooksList extends React.Component {
     const name = book.title;
     const rok=book.year;
     const idb=book.bookId;
+    const desc = book.description;
     const ilosc=book.numberOfCopies;
-    return <BookItem key={name} rok={rok} idb={idb} ilosc={ilosc} avatarUrl={avatarUrl} name={name} />;
+    return <BookItem key={name} rok={rok} idb={idb} desc={desc} ilosc={ilosc} avatarUrl={avatarUrl} name={name} />;
   };
  
   render() {

@@ -33,6 +33,7 @@ import BookDelete from './AdminPanel/Books/BookDelete';
 import BookEditBefore from './AdminPanel/Books/BookEditorBefore';
 import BookEditor from './AdminPanel/Books/BookEditor';
 import AdminAuthorBook from './AdminPanel/Books/AdminAuthorBook';
+import History from './History/History';
 
 import {
   BrowserRouter as Router,
@@ -78,6 +79,7 @@ class App extends Component {
         <Route path="/admin/bookedit/:id" component={BookEditor}/>
         <Route path="/admin/oddaj/:id" component={Oddaj}/>
         <Route path="/orders" component={UserOrderPreview}/>
+        <Route path="/history" component={History}/>
         <Route path="/admin/test" component={AdminAuthorBook}/>
       </div>
     </Router>

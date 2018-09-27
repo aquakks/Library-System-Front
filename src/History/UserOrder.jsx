@@ -10,7 +10,7 @@ export class UserOrder extends Component {
       };
 
       componentDidMount() {
-        fetch('http://localhost:5000/borrows/' + id + '/notcompleted')
+        fetch('http://localhost:5000/borrows/' + id + '/completed')
         .then(res => res.json())
         .then(json => {
             let result = json.results || json;

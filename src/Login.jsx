@@ -66,7 +66,7 @@ class Login extends Component {
         <label>Login <input type="text" name="this.state.email" onChange={this.handleEmailChange} /></label>
       </FormItem>
       <FormItem>
-        <label>Haslo <input type="text" name="this.state.password" onChange={this.handlePasswordChange} /></label><br />
+        <label>Haslo <input type="password" name="this.state.password" onChange={this.handlePasswordChange} /></label><br />
       </FormItem>
         <input type="submit" value="Zaloguj"/>
     </Form>
