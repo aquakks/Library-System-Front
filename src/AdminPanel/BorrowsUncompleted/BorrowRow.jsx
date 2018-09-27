@@ -20,7 +20,7 @@ export const BorrowRow = ({ id, userId, bookId, startDate, endDate, penalty, ext
             </Moment></td>
 		<td className="penalty">{penalty}</td>
         <td className="extends">{ext}</td>
-        <td className="isCompleted">{isCompleted}</td>
+        <td className="edit"><a href={"/admin/oddaj/"+id}>Zakoncz</a></td>
       </tr>
     </tbody>
   </table>

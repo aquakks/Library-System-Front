@@ -11,6 +11,9 @@ import AdminUsers from "./AdminPanel/Users/AdminUsers";
 import AdminBooks from "./AdminPanel/Books/AdminBooks";
 import AdminAuthors from "./AdminPanel/Author/AdminAuthors";
 import AdminBorrows from "./AdminPanel/Borrows/AdminBorrows";
+import AdminBorrowsCompleted from "./AdminPanel/BorrowCompleted/AdminBorrowsCompleted";
+import AdminBorrowsUncompleted from "./AdminPanel/BorrowsUncompleted/AdminBorrowsUncompleted";
+import Oddaj from "./AdminPanel/BorrowsUncompleted/Oddaj";
 import AdminEditUser from "./AdminPanel/Users/AdminEditUser";
 import AdminEditBook from "./AdminPanel/Books/AdminEditBook";
 import AddAuthor from "./AdminPanel/Author/AddAuthor";
@@ -51,6 +54,8 @@ class App extends Component {
         <Route path="/admin/books" component={AdminBooks}/>
         <Route path="/admin/authors" component={AdminAuthors}/>
         <Route path="/admin/borrows" component={AdminBorrows}/>
+        <Route path="/admin/borrowscompleted" component={AdminBorrowsCompleted}/>
+        <Route path="/admin/borrowsuncompleted" component={AdminBorrowsUncompleted}/>
         <Route path="/admin/edituser" component={AdminEditUser}/>
         <Route path="/admin/editbook" component={AdminEditBook}/>
         <Route path="/admin/author" component={AddAuthor}/>
@@ -70,6 +75,7 @@ class App extends Component {
         <Route path="/admin/bookdelete/:id" component={BookDelete}/>
         <Route path="/admin/bookeditbefore/:id" component={BookEditBefore}/>
         <Route path="/admin/bookedit/:id" component={BookEditor}/>
+        <Route path="/admin/oddaj/:id" component={Oddaj}/>
         <Route path="/orders" component={UserOrderPreview}/>
       </div>
     </Router>

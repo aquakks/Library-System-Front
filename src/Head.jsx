@@ -47,7 +47,7 @@ export const Head = () => {
                             <a className="nav-link" href="/orders">Wypożyczenia</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/regulamin">Regulamin</a>
+                            <a className="nav-link" href="/history">Historia</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Inne</a>
